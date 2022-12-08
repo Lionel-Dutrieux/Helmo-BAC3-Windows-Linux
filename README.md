@@ -1,2 +1,34 @@
 # Helmo-BAC3-Windows-Linux
-Synthèse pour les cours de Linux et de Windows
+Synthèse pour les cours de Windows et de Linux
+
+## Windows
+
+- [Démarrage de l'hyperviseur](https://)
+- [Installation de Windows Server 2022](https://)
+- [ Introduction à Powershell](https://)
+- [Domaine et utilisateurs](https://)
+- [Espace disque, partage et droits](https://)
+- [Services de base](https://)
+- [GPO et politiques de sécurité](https://)
+- [Administration et GPO avancées](https://)
+- [Sauvegarde et restauration](https://)
+- [Remote desktop](https://)
+- [Servce IIS et SSL](https://)
+
+
+## Linux
+
+- [Introduction à Linux](https://)
+- [Introduction à Python](https://)
+- [Administration du disque dur](https://)
+- [Sauvegarde, planification et installation](https://)
+- [Configuration réseau et démarrage / arrêt du système](https://)
+- [Configuration du routage](https://)
+- [Les services réseaux de base](https://)
+- [Le service DNS](https://)
+- [Le service SAMBA](https://)
+- [Le serveur web Apache](https://)
+- [Le service FTP](https://)
+- [Le service mail](https://)
+- [Le firewall](https://)
+- [Introduction à Docker](https://)
