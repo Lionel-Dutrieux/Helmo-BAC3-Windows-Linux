@@ -4,7 +4,7 @@ Synthèse pour les cours de Windows et de Linux
 ## Windows
 
 - [Démarrage de l'hyperviseur](Windows/1-hyperviseur.md)
-- [Installation de Windows Server 2022](https://)
+- [Installation de Windows Server 2022](Windows/2-installation.md)
 - [ Introduction à Powershell](https://)
 - [Domaine et utilisateurs](https://)
 - [Espace disque, partage et droits](https://)
@@ -32,3 +32,11 @@ Synthèse pour les cours de Windows et de Linux
 - [Le service mail](https://)
 - [Le firewall](https://)
 - [Introduction à Docker](https://)
+
+## Links
+
+[Web Interface Pfsense](http://192.168.190.2:1080)
+
+Username: admin 
+
+Password: rootroot
