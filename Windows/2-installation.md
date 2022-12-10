@@ -16,6 +16,7 @@ Entrez un mot de passe : P@ssword
 - Installation des outils
 - Configuration réseau
 - Rôle et fonctionnalités
+- Installer Visual Studio Code
 
 ### Changer le thème
 
@@ -76,3 +77,9 @@ Manage > Add Roles and Features
 - DHCP Server
 - File Server Ressource Manager
 - Windows Server Backup
+
+### Installer Visual Studio Code
+
+[Visual Studio Code]([https://](https://code.visualstudio.com/))
+
+Installer l'extension Powershell
