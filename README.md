@@ -5,7 +5,7 @@ Synthèse pour les cours de Windows et de Linux
 
 - [Démarrage de l'hyperviseur](Windows/1-hyperviseur.md)
 - [Installation de Windows Server 2022](Windows/2-installation.md)
-- [ Introduction à Powershell](https://)
+- [Introduction à Powershell](Windows/3-powershell.md)
 - [Domaine et utilisateurs](https://)
 - [Espace disque, partage et droits](https://)
 - [Services de base](https://)
