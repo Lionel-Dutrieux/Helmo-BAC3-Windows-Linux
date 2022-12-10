@@ -153,3 +153,9 @@ foreach ($ligne in $contenu) {
     }
 }
 ```
+
+Générer un mot de passe aléatoire ([generatePassword.ps1](scripts/generatePassword.ps1))
+
+```powershell
+$pass = &"./generatePassword.ps1" -length 8 -maxNumber 2 -maxUpper 2
+```
