@@ -7,7 +7,7 @@ Synthèse pour les cours de Windows et de Linux
 - [Installation de Windows Server 2022](Windows/2-installation.md)
 - [Introduction à Powershell](Windows/3-powershell.md)
 - [Domaine et utilisateurs](Windows/4-domaine.md)
-- [Espace disque, partage et droits](https://)
+- [Espace disque, partage et droits](Windows/5-disque.md)
 - [Services de base](https://)
 - [GPO et politiques de sécurité](https://)
 - [Administration et GPO avancées](https://)
