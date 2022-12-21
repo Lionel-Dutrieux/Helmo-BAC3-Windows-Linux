@@ -11,7 +11,7 @@ Synthèse pour les cours de Windows et de Linux
 - [Introduction à Powershell](Windows/3-powershell.md)
 - [Domaine et utilisateurs](Windows/4-domaine.md)
 - [Espace disque, partage et droits](Windows/5-disque.md)
-- [Services de base](https://)
+- [Services de base](Windows/6-services.md)
 - [GPO et politiques de sécurité](https://)
 - [Administration et GPO avancées](https://)
 - [Sauvegarde et restauration](https://)
