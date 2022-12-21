@@ -63,7 +63,7 @@ Quota Entries
 
 Tools > File Server Resource Manager
 
-Création de template de quota
+Création de templates de quota
 
 Quota Template > Create Quota Template
 
@@ -73,14 +73,14 @@ Appliquer la template:
 
 Quotas > Create Quota
 
-Indiquer le path du dossier et selectionner une template
+Indiquer le path du dossier et sélectionner un template
 
 ```powershell
 New-FSRMQuota -Path "C:\testQuota" -Template "Limit150Mo"
 New-FSRMAutoQuota -Path "C:\testQuota" -Template "Limit150Mo"
 ```
 
-> Le quota automatique permet d'hériter le quota aux sous dossier.
+> Le quota automatique permet d'hériter le quota aux sous-dossiers.
 
 ## Les partages
 
@@ -94,7 +94,7 @@ Add Authenticated Users (Cocher change)
 
 > Ne pas oublier de modifier les ACLs
 
-Acceder aux partages depuis une autre machine
+Accéder aux partages depuis une autre machine
 
 Mapper une lettre au lecteur
 
@@ -115,7 +115,7 @@ File Server Manager > Active Directory Users and Computers > User > Profile
 
 ![alt](images/profilepath.png)
 
-> Il est impossible pour l’admin de rentrer dans le dossier monprof.V6 (Pour regler le probleme il faut créer le dossier à l’avance ou remplacer le owner par Administrator et replace all child object permission entries)
+> Il est impossible pour l’admin de rentrer dans le dossier monprof.V6 (pour régler le problème il faut créer le dossier à l’avance ou remplacer le owner par Administrator et replace all child object permission entries)
 
 ```powershell
 # Parametre en plus de la commannde New-AdUser

@@ -16,7 +16,7 @@ Edit > Virtual Network Editor
 
 ![VMnet8](images/vmware2.png)
 
-> Info : VMnet8 en NAT permet de passer le traffic des machines virtuelle par l'adresse ip de l'hote
+> Info : VMnet8 en NAT permet de passer le trafic des machines virtuelles par l'adresse IP de l'hôte
 
 ## Ouvrir une machine virtuelle
 

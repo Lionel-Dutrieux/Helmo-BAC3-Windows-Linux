@@ -2,13 +2,13 @@
 
 # Introduction à Powershell
 
-Il existe plusieurs façon d'écrire des scripts Powershell, la première consiste à utiliser Powershell ISE qui est déjà installé dans Windows Server, la seconde est Visual Studio Code avec l'extension Powershell.
+Il existe plusieurs façons d'écrire des scripts Powershell, la première consiste à utiliser Powershell ISE qui est déjà installé dans Windows Server, la seconde est Visual Studio Code avec l'extension Powershell.
 
 ## Sécurité
 
-Les scripts Powershell pouvant être dangereux il n'est pas possible de base d'éxécuter des scripts provenant d'internet.
+Les scripts Powershell pouvant être dangereux, il n'est pas possible de base d'exécuter des scripts provenant d'internet.
 
-Pour permettre l'éxécution de script non sécurisé utilisez la commande:
+Pour permettre l'exécution de script non sécurisé, utilisez la commande:
 
 ```powershell
 Set-ExecutionPolicy Unrestricted
@@ -26,7 +26,7 @@ Powershell utilise un typage dynamique, il est possible de **forcer le type** de
 
 | Type        | Description                                       |
 |-------------|---------------------------------------------------|
-| [string]    | Une chaîne de carractères                         |
+| [string]    | Une chaîne de caractères                         |
 | [char]      | Un caractère                                      |
 | [byte]      | Un caractère codé sur 8 bits                      |
 | [bool]      | Une valeur booléenne                              |
@@ -68,10 +68,10 @@ $dictionnaire.ContainsValue("val2")
 | -eq       | == | Vérifie si 2 chaînes sont identiques                                |
 | -ne       | != | Vérifie si 2 chaînes sont différentes                               |
 | -ge       | >= | Vérifie si la première chaîne est plus grande ou égale à la seconde |
-| -gt       | >  | Vérifie si la première chaîne est plus grande que la seconde        |
-| -lt       | <  | Vérifie si la première chaîne est plus petite que la seconde        |
+| -gt       | >  | Vérifie si la première chaîne est plus grande que la seconde.        |
+| -lt       | <  | Vérifie si la première chaîne est plus petite que la seconde.        |
 | -le       | <= | Vérifie si la première chaîne est plus petite ou égale à la seconde |
-| -match    |    | Vérifie si la chaîne correspond à l'expression régulière renseignée |
+| -match    |    | Vérifie si la chaîne correspond à l'expression régulière renseignée. |
 
 ## Méthodes
 
@@ -99,7 +99,7 @@ Write-Output "Hello World!"
 $contenu = Get-Content "C:\TEMP\exemple.csv"
 ```
 
-**Import-Csv** permet de lire directement un fichier au format CSV. Le résultat est un tableau donc chaque élément contient un dictionnaire
+**Import-Csv** permet de lire directement un fichier au format CSV. Le résultat est un tableau donc chaque élément contient un dictionnaire.
 
 > La cmdlet suppose que le fichier CSV proposé contient une ligne de titre
 

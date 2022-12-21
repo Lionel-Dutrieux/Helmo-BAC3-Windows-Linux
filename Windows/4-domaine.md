@@ -2,7 +2,7 @@
 
 # Domaine et utilisateurs
 
-## Utilisateur locaux
+## Utilisateurs locaux
 
 Server Manager
 
@@ -10,11 +10,11 @@ Tools > Computer Management > System Tools
 
 Local Users and Groups
 
-Par un clic-droit il est possible d'ajouter un nouvel utilisateur.
+Par un clic droit, il est possible d'ajouter un nouvel utilisateur.
 
 ## Active Directory
 
-Lorsqu'on promeut un serveur en contrôleur du domaine les utilisateurs locaux sont convertis en utilisateurs du domaine ainsi que les groupes locaux.
+Lorsqu'on promeut un serveur en contrôleur du domaine, les utilisateurs locaux sont convertis en utilisateurs du domaine ainsi que les groupes locaux.
 
 ### Installation
 
@@ -34,17 +34,17 @@ Ajoutez un mot de passe de récupération
 
 > P@ssword
 
-Pas besoin de modifier la configuration des délégation DNS
+Pas besoin de modifier la configuration des délégations DNS
 
-Une fois effectué le serveur redémarre.
+Une fois, effectuer, le serveur redémarre.
 
 **Désactiver l'expiration des mots de passes**
 
-Par défaut les mots de passes expirent après 42 jours.
+Par défaut les mots de passe expirent après 42 jours.
 
 Server Manager > Tools > Group Policy Management
 
-Forest > Domains puis le domaine courant et faire un clic-droit sur l'élément Default Domain Policy puis choisir Edit.
+Forest > Domains puis le domaine courant et faire un clic droit sur l'élément Default Domain Policy puis choisir Edit.
 
 L'éditeur de gestion des stratégies de groupe s'ouvre.
 
@@ -67,7 +67,7 @@ Créer une unité organisationnelle CGDOM, avec à l'intérieur, les unités sui
 4. Workstations
 5. Servers
 
-### Ajouter une unité organisationelle
+### Ajouter une unité organisationnelle
 
 ```powershell
 New-ADOrganizationalUnit –Name "Mes sujets" -ProtectFromAccidentalDeletion $false -Path "DC=cgXX,DC=local"
