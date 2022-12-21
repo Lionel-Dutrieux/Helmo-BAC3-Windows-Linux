@@ -104,7 +104,13 @@ $contenu = Get-Content "C:\TEMP\exemple.csv"
 > La cmdlet suppose que le fichier CSV proposé contient une ligne de titre
 
 ```powershell
-$contenu = Import-Csv -Path .\Processes.csv -Delimiter ';'
+$csv = Import-Csv -Path .\liste-users.csv -Delimiter ';'
+
+foreach ($row in $csv) {
+    $row | Add-Member -NotePropertyName "Password" -NotePropertyValue 'newPassword'
+}
+
+$csv | Export-Csv -Path .\liste-users-pass.csv -NoTypeInformation -Delimiter ';'
 ```
 
 **New-Item** permet de créer un dossier
