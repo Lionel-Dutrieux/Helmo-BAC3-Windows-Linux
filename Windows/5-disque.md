@@ -12,11 +12,11 @@ Tools > Computer Management > Disk Management
 
 ## Les droits ACL
 
-![alt](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d2b4bd53-c2ff-4e44-8657-307969e0ae11/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221219%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221219T155111Z&X-Amz-Expires=86400&X-Amz-Signature=f9f89bc4c69acb7b8d37dcb312518140b974a7ad185b3525ad0c82b54f21abfe&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
+![alt](images/acl1.png)
 
-![alt](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/436e1215-1df7-42d0-8e6b-211d06802a59/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221219%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221219T155154Z&X-Amz-Expires=86400&X-Amz-Signature=3eff1ebde535ad36d88607bb3363f31f39b08917c3fc1b44f3cb598bb1242ffa&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
+![alt](images/acl2.png)
 
-![alt](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/0a0e6a3b-fbd9-46e0-8bf6-ba46b7edbd6e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221219%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221219T155238Z&X-Amz-Expires=86400&X-Amz-Signature=fdd03e757336104570e6cf8f7732f7994b0b53848cfb7679ad70dcb98116069d&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
+![alt](images/acl3.png)
 
 ## Modification des permissions
 
@@ -40,7 +40,7 @@ Set-Acl -Path "c:\TestAcl" $acl
 $rule = New-Object System.Security.AccessControl.FileSystemAccessRule("GODSWILA\Powerswila", "FullControl", "ContainerInherit,ObjectInherit", "None", "Allow")
 ```
 
-![alt](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9af86443-4437-4e9c-9033-7794749dedc7/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221219%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221219T161030Z&X-Amz-Expires=86400&X-Amz-Signature=58a823ddb6f94e776ddbd7ae11eba141ed9323eec163332d674eb6e00dd0715b&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
+![alt](images/acl4.png)
 
 ## Les quotas
 
