@@ -104,7 +104,7 @@ $contenu = Get-Content "C:\TEMP\exemple.csv"
 > La cmdlet suppose que le fichier CSV proposé contient une ligne de titre
 
 ```powershell
-$contenu = Import-Csv -Path .\Processes.csv -Delimiter ;
+$contenu = Import-Csv -Path .\Processes.csv -Delimiter ';'
 ```
 
 **New-Item** permet de créer un dossier
