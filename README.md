@@ -12,7 +12,7 @@ Synthèse pour les cours de Windows et de Linux
 - [Domaine et utilisateurs](Windows/4-domaine.md)
 - [Espace disque, partage et droits](Windows/5-disque.md)
 - [Services de base](Windows/6-services.md)
-- [GPO et politiques de sécurité](https://)
+- [GPO et politiques de sécurité](Windows/7-gpo.md)
 - [Administration et GPO avancées](https://)
 - [Sauvegarde et restauration](https://)
 - [Remote desktop](https://)
