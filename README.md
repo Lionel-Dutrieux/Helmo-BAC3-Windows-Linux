@@ -16,7 +16,7 @@ Synthèse pour les cours de Windows et de Linux
 - [Administration et GPO avancées](Windows/8-admin-gpo.md)
 - [Sauvegarde et restauration](Windows/9-sauvegarde.md)
 - [Remote desktop](Windows/10-remote.md)
-- [Servce IIS et SSL](https://)
+- [Service IIS et SSL](Windows/11-IIS-SSL.md)
 
 
 ## Linux
