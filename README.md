@@ -14,7 +14,7 @@ Synthèse pour les cours de Windows et de Linux
 - [Services de base](Windows/6-services.md)
 - [GPO et politiques de sécurité](Windows/7-gpo.md)
 - [Administration et GPO avancées](Windows/8-admin-gpo.md)
-- [Sauvegarde et restauration](https://)
+- [Sauvegarde et restauration](Windows/9-sauvegarde.md)
 - [Remote desktop](https://)
 - [Servce IIS et SSL](https://)
 
