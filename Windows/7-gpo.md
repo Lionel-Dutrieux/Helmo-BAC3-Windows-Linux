@@ -30,13 +30,17 @@ User Configuration > Preferences > Windows Settings > Drive Maps
 
 ### Exécuter un script
 
-User Configuration > Preferences > Windows Settings > Scripts > Logon
+User Configuration > Policies > Windows Settings > Scripts > Logon
 
 > Les scripts sont lancés après 5 minutes (Pour changer il faut modifier une GPO Computers > Configure Logon Script  Delay)
+
+> Attention l'emplacement du script doit être accessible via le réseau et configurer avec de bon ACL
 
 ### Permettre la connexion d’un utilisateurs sur le controleur de domaine
 
 Computer Configuration > Policies > Windows Settings > Security Settings > Local Policies > User R > Allo logon on locally > Add User
+
+> Il faut modifier le Default Domain Controllers Policy
 
 ### Empecher de voir qui est le dernier utilisateur de la machine
 
