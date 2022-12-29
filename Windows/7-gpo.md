@@ -58,6 +58,10 @@ System > Group Policy > Configure folder redirection policy processing > enabled
 
 User Configuration > Policies > Administrative Template > System > Prevent access to the command prompt
 
+### Configure Logon Script Delay
+
+Computer Configuraion > Administrative Template > System > Group Policy > Configure Logon Script Delay
+
 ## Limiter la portée d'une GPO
 
 Pour modifier la portée à un certain groupe on peut modifier le sécurity filtering
