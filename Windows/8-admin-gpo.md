@@ -73,7 +73,7 @@ Appliquer une audit sur un dossier
 
 Server Manager > Tools > Group Policy Management
 
-New GPO > Computer Configuration > Policies > Administrative Template > System Group Policy > Configure user Group Policy loopback processing mode
+New GPO > Computer Configuration > Policies > Administrative Template > System > Group Policy > Configure user Group Policy loopback processing mode
 
 > Mode replace = stratégie utilisateur, on ne prend pas compte de la stratégie ordinateur
 

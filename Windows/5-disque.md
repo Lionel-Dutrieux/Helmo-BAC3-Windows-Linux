@@ -123,3 +123,8 @@ File Server Manager > Active Directory Users and Computers > User > Profile
 
 Ou Set-AdUser
 ```
+
+Par défaut, le profil est local. Si l’on veut obtenir un profil obligatoire, l’administrateur doit renommer,
+une fois la configuration terminée, le fichier caché NTUSER.DAT en NTUSER.MAN. Ce profil devient
+alors obligatoire et tout changement réalisé par l’utilisateur dans son profil (bureau, paramètres …) est
+perdu.
