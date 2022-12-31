@@ -1,0 +1,4 @@
+dn: cn=mongroup, ou=Groups, dc=localdomain
+description: ma jolie description
+objectClass: top
+objectClass: posixGroup

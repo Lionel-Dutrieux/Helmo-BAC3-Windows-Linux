@@ -1,0 +1,12 @@
+dn: uid=e190061, ou=Student, ou=People, dc=localdomain
+objectClass: top
+objectClass: inetorgperson
+objectClass: posixAccount
+cn: Lionel DUTRIEUX
+sn: DUTRIEUX
+givenname: Lionel
+userPassword: {SSHA} /!\ slappasswd -s rootroot
+gidNumber: 100
+uidNumber: 15000
+homeDirectory: /home/e190061
+loginShell: /bin/bash

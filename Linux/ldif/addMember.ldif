@@ -1,0 +1,4 @@
+dn: cn=mongroup, ou=Groups, dc=localdomain
+changetype: modify
+add: memberuid
+memberuid: e190061

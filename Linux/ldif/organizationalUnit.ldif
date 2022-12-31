@@ -1,0 +1,5 @@
+dn: ou=Student, ou=People, dc=localdomain
+ou: Student
+description: Tous les etudiants
+objectClass: top
+objectClass: organizationalUnit
