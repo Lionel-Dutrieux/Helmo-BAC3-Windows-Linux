@@ -22,7 +22,7 @@ Synthèse pour les cours de Windows et de Linux
 ## Linux
 
 - [Introduction à Linux](Linux/1-introduction.md)
-- [Introduction à Python](https://)
+- [Introduction à Python](Linux/2-python.md)
 - [Administration du disque dur](https://)
 - [Sauvegarde, planification et installation](https://)
 - [Configuration réseau et démarrage / arrêt du système](https://)
