@@ -59,7 +59,7 @@ c1.split(sep) # Retourne une liste en fonction du separateur
 "sep".join(lst) # Rassemble une chaîne
 ```
 
-## Les entrées et sortie
+## Les entrées et sorties
 
 ```python
 prenom = input("Entrez votre prenom:")
@@ -76,7 +76,7 @@ with open("./copie.txt", "w") as sortie, open("./original.txt", "r") as entree:
         sortie.write(ligne)
 ```
 
-Méthode d'accès pour acceder à un fichier
+Méthode d'accès pour accéder à un fichier
 
 | Droit | Explication |
 | --- | --- |
@@ -122,4 +122,21 @@ cmd = "ps -ef | wc -l" # On Compte le nbre de processus
 result = subprocess.run(cmd, stdout=subprocess.PIPE, shell = True)
 
 print(f"Nombre de processus = {result.stdout.decode().rstrip()}")
+```
+
+## Exemples
+
+### Lire & Ecrire un fichier CSV
+
+```python
+import csv
+
+with open("./liste-utilisateurs.csv", "r", encoding='utf-8') as csvfile, open("./liste-utilisateurs-2.csv", "w", encoding='utf-8', newline='') as output:
+    csvreader = csv.reader(csvfile, delimiter=";")
+    csvwriter = csv.writer(output, delimiter=";")
+    for row in csvreader:
+        print(row)
+        row.append("matricule")
+        row.append("password")
+        csvwriter.writerow(row)
 ```
