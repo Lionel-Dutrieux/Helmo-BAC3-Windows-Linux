@@ -25,7 +25,7 @@ Synthèse pour les cours de Windows et de Linux
 - [Introduction à Python](Linux/2-python.md)
 - [Administration du disque dur](Linux/3-disque.md)
 - [Sauvegarde, planification et installation](Linux/4-sauvegarde.md)
-- [Configuration réseau et démarrage / arrêt du système](https://)
+- [Configuration réseau et démarrage / arrêt du système](Linux/5-reseau.md)
 - [Configuration du routage](https://)
 - [Les services réseaux de base](https://)
 - [Le service DNS](https://)
