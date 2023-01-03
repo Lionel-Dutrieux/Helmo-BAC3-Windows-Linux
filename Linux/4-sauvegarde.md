@@ -40,11 +40,11 @@ tar tvJf /tmp/save-etc.tar.gz /etc (xz)
 
 ## Sauvegarde de fichiers
 
-`scp` permet de copier un ou plusieurs fichiers vers une machine distante.
+`scp` Permets de copier un ou plusieurs fichiers vers une machine distante.
 
-`rsync` permet de synchroniser un dossier avec une machine distante
+`rsync` permets de synchroniser un dossier avec une machine distante
 
-`lftp` permet de copier, par ftp, des fichiers ou dossiers
+`lftp` permets de copier, par ftp, des fichiers ou dossiers
 
 ### Sauvegarde par SCP
 
@@ -69,7 +69,7 @@ at 15:20
 CTRL + D
 ```
 
-Planification possibles
+Planification possible
 
 - at 15:3007192021
 - at 15:30 jul 19 2021
@@ -105,7 +105,7 @@ dnf search php
 dnf install ./monfichier.rpm
 ```
 
-Applications fournies sous la forme de fichiers source
+Applications fournies sous la forme de fichiers sources
 
 1. Télécharger l'application depuis internet (souvent archive .tar.gz) Il faut décompresser l'archive
 2. Compilation de l'application

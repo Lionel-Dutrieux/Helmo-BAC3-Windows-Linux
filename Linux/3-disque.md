@@ -67,7 +67,7 @@ g: group
 setfacl -m u:e190061:rwx myfolder
 ```
 
-### Propager les droits ACL (plusieurs dossier imbriqué)
+### Propager les droits ACL (plusieurs dossiers imbriqués)
 
 d: default
 
@@ -87,7 +87,7 @@ setfacl -m g:users:- myfolder
 
 ### Activer les quotas
 
-Modification du quotas sur la partition home
+Modification du quota sur la partition home
 
 ```
 sudo nano /etc/fstab
