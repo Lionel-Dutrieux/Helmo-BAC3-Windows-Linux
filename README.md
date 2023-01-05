@@ -27,7 +27,7 @@ Synthèse pour les cours de Windows et de Linux
 - [Sauvegarde, planification et installation](Linux/4-sauvegarde.md)
 - [Configuration réseau et démarrage / arrêt du système](Linux/5-reseau.md)
 - [Configuration du routage](Linux/6-routage.md)
-- [Les services réseaux de base](https://)
+- [Les services réseaux de base](Linux/7-services.md)
 - [Le service DNS](https://)
 - [Le service SAMBA](https://)
 - [Le serveur web Apache](https://)
