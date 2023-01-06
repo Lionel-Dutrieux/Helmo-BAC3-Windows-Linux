@@ -28,7 +28,7 @@ Synthèse pour les cours de Windows et de Linux
 - [Configuration réseau et démarrage / arrêt du système](Linux/5-reseau.md)
 - [Configuration du routage](Linux/6-routage.md)
 - [Les services réseaux de base](Linux/7-services.md)
-- [Le service DNS](https://)
+- [Le service DNS](Linux/8-dns.md)
 - [Le service SAMBA](https://)
 - [Le serveur web Apache](https://)
 - [Le service FTP](https://)
