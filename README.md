@@ -29,7 +29,7 @@ Synthèse pour les cours de Windows et de Linux
 - [Configuration du routage](Linux/6-routage.md)
 - [Les services réseaux de base](Linux/7-services.md)
 - [Le service DNS](Linux/8-dns.md)
-- [Le service SAMBA](https://)
+- [Le service SAMBA](Linux/9-samba.md)
 - [Le serveur web Apache](https://)
 - [Le service FTP](https://)
 - [Le service mail](https://)
