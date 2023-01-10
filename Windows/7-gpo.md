@@ -66,6 +66,10 @@ User Configuration > Policies > Administrative Template > System > Prevent acces
 
 Computer Configuraion > Administrative Template > System > Group Policy > Configure Logon Script Delay
 
+### Afficher un message avant de se connecter
+
+Computer Configuration > Policies > Windows Settings > Security Settings > Local Policis > Security Options > Interactive Logon Message
+
 ## Limiter la portée d'une GPO
 
 Pour modifier la portée à un certain groupe on peut modifier le sécurity filtering
