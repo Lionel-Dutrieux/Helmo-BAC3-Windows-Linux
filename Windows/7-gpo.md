@@ -70,6 +70,10 @@ Computer Configuraion > Administrative Template > System > Group Policy > Config
 
 Computer Configuration > Policies > Windows Settings > Security Settings > Local Policis > Security Options > Interactive Logon Message
 
+### Autoriser un compte à Remote Desktop
+
+Computer Configuration > Policies > Windows Settings > Security Settings > Local Policies > User Right > Allow log on through Remote Desktop Service
+
 ## Limiter la portée d'une GPO
 
 Pour modifier la portée à un certain groupe on peut modifier le sécurity filtering
