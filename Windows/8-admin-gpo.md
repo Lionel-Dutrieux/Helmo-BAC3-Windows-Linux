@@ -53,6 +53,10 @@ auditpol /backup /file:C:\TEMP\AuditDefault.csv
 auditpol /restore /file:C:\TEMP\AuditDefault.csv
 ```
 
+![alt](images/admin9.png)
+
+![alt](images/admin10.png)
+
 Il faut activer les Audits avancées vie une GPO
 
 Server Manager > Tools > Group Policy Management
