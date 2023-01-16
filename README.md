@@ -32,7 +32,7 @@ Synthèse pour les cours de Windows et de Linux
 - [Le service SAMBA](Linux/9-samba.md)
 - [Le serveur web Apache](Linux/10-apache.md)
 - [Le service FTP](Linux/11-ftp.md)
-- [Le service mail](https://)
+- [Le service mail](Linux/12-mail.md)
 - [Le firewall](https://)
 - [Introduction à Docker](https://)
 
