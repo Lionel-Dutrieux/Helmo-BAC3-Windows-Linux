@@ -8,27 +8,47 @@ reg = r"(0*)(\d+)"
 
 existingGroup = []
 
+uniqueId = 20000
+
+
+def getId():
+    global uniqueId
+    uniqueId = uniqueId + 1
+    return uniqueId
+
+
 with open("./liste-utilisateurs-password.csv", "r", encoding='utf-8') as input:
     csvreader = csv.reader(input, delimiter=";")
     for user in csvreader:
 
-        num = re.findall(reg, user[3])
+        name = user[0]
+        firstName = user[1]
+        departement = user[2]
+        matricule = user[3]
+        password = user[4]
 
-        if int(num[0][1]) % 2 == 0:
+        num = re.findall(reg, matricule)
+        num = int(num[0][1])
+
+        if num % 2 == 0:
             subprocess.call(
-                f"mkglobal-user.py {user[0]} {user[1]} {20000 + num[0][1]} {user[3]} {user[4]}", shell=True)
+                f"./mkglobal-user.py \"{name}\" \"{firstName}\" \"{getId()}\" \"{matricule}\" \"{password}\"", shell=True)
+            result = subprocess.run(
+                f"mkdir /home/{matricule}", stdout=subprocess.PIPE, shell=True)
+            result = subprocess.run(
+                f"chmod 700 /home/{matricule}", stdout=subprocess.PIPE, shell=True)
+            result = subprocess.run(
+                f"chown {matricule}:users /home/{matricule}", stdout=subprocess.PIPE, shell=True)
         else:
             result = subprocess.run(
-                f"useradd -g users {user[3]}", stdout=subprocess.PIPE, shell=True)
-
+                f"useradd -g users \"{matricule}\"", stdout=subprocess.PIPE, shell=True)
             result = subprocess.run(
-                f"echo {user[4]} | passwd {user[3]}", stdout=subprocess.PIPE, shell=True)
+                f"echo -e \"{password}\n{password}\" | passwd {matricule}", stdout=subprocess.PIPE, shell=True)
 
-        if user[2] not in existingGroup:
+        if departement not in existingGroup:
             result = subprocess.run(
-                f"groupadd {user[2].lower()}", stdout=subprocess.PIPE, shell=True)
-            existingGroup.append(user[2])
+                f"groupadd {departement.lower()}", stdout=subprocess.PIPE, shell=True)
+            existingGroup.append(matricule)
 
-        # Ajoute l'utilisateur au groupe
         result = subprocess.run(
-            f"usermod -G {user[2].lower()} {user[3]}", stdout=subprocess.PIPE, shell=True)
+            f"usermod -G \"{departement.lower()}\" \"{matricule}\"", stdout=subprocess.PIPE, shell=True)
