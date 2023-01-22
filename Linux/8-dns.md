@@ -19,6 +19,12 @@ Vérifier le serveur DNS d'un nom de domaine
 host -t NS swilabus.be
 ```
 
+Vérrifier le trafic DNS
+
+```
+tcpdump -n -i [interface] port 53
+```
+
 ## Installer un serveur DNS
 
 ```
