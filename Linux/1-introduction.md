@@ -2,6 +2,10 @@
 
 # Introduction à Linux
 
+Installer Visual Studio Code
+
+> code . --no-sandbox  --user-data-dir="/root/.vscode"
+
 ## Les utilisateurs locaux
 
 Visualiser les comptes utilisateurs
@@ -27,6 +31,8 @@ Donner un mot de passe à un utilisateur
 ```
 passwd lionel
 ```
+
+> Pour supprimer le dictionary check `nano /usr/share/dict/linux.words Shift + W` puis `create-cracklib-dict /usr/share/dict/linux.words`
 
 ### Supprimer un utilisateur sur RHEL 8
 
@@ -89,6 +95,8 @@ Utiliser une entrée déjà existante pour créer une nouvelle
 ![alt](images/intro3.png)
 
 > Il faut bien modifier le home directory et le uidNumber qui doit être unique et le mot de passe
+
+> Le gidNumber correspond au groupe principal
 
 ### Ajouter une nouvelle entrée (Ligne de commande)
 

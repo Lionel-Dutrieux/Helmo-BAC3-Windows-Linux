@@ -81,7 +81,7 @@ mount -t cifs //192.168.1.50/Backup /media -o username=e190061, domain=DOMAIN, p
 #### Démonter le partage SAMBA
 
 ```
-unmount /media
+umount /media
 ```
 
 ## Exemples

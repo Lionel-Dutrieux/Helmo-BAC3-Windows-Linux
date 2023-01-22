@@ -101,7 +101,7 @@ Configurer le domain-name et les serveurs DNS:
 
 ```
 domain-name: "localdomain";
-domain-name-server 9.9.9.9, 1.1.1.1;
+domain-name-servers 9.9.9.9, 1.1.1.1;
 ```
 
 Créer un `shared-network` (Vidéo: 48:00)
@@ -132,6 +132,38 @@ host name {
 ```
 
 > Attention les adresses IP fixe ne peuvent pas se trouver dans la range du serveur DHCP
+
+Exemple
+
+```
+# dhcpd.conf
+#
+# Sample configuration file for ISC dhcpd
+#
+
+# option definitions common to all supported networks...
+option domain-name "localdomain";
+option domain-name-servers 9.9.9.9, 1.1.1.1;
+
+default-lease-time 600;
+max-lease-time 7200;
+
+log-facility local7;
+
+
+shared-network RESEAU-CLIENT {
+    subnet 192.168.131.0 netmask 255.255.255.0 {
+        range 192.168.131.150 192.168.131.200;
+        option routers 192.168.190.115;
+        option broadcast-address 192.168.131.255;
+    }
+}
+
+host client {
+  hardware ethernet 00:0c:29:e2:a3:b4;
+  fixed-address 192.168.131.15;
+}
+```
 
 ## NTP
 

@@ -114,6 +114,8 @@ Cette commande permet de fixer un quota sur un utilisateur ou un groupe
 xfs_quota -x -c 'limit bsoft=100m bhard=110m e190061' /home
 ```
 
+> Il faut préciser `-g` après limit pour les groupes
+
 ### Fixer un quota pour un projet
 
 ```
