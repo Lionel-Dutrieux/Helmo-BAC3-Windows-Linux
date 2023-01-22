@@ -36,7 +36,7 @@ cd /var/named/chroot/etc/
 Copier le fichier d'exemple:
 
 ```
-cp/ usr/share/doc/bind/sample/etc/* ./
+cp /usr/share/doc/bind/sample/etc/* ./
 ```
 
 Modifier le fichier `named.conf`
@@ -179,3 +179,127 @@ systemctl enable named-chroot
 ```
 
 > nmtui et modifier le serveur dns par lui-même 127.0.0.1
+
+## Exemples
+
+named.conf
+
+```
+options
+{
+	// Put files that named is allowed to write in the data/ directory:
+	directory 		"/var/named";		// "Working" directory
+	dump-file 		"data/cache_dump.db";
+	statistics-file 	"data/named_stats.txt";
+	memstatistics-file 	"data/named_mem_stats.txt";
+	secroots-file		"data/named.secroots";
+	recursing-file		"data/named.recursing";
+
+
+	listen-on port 53	{ any; };
+	listen-on-v6 port 53	{ any; };
+
+	allow-query { any; };
+	allow-query-cache { any; };
+
+	recursion yes;
+
+	version "1234";
+	forwarders	{1.1.1.1; };
+
+	dnssec-enable yes;
+
+	dnssec-validation yes;
+
+	pid-file "/run/named/named.pid";
+	session-keyfile "/run/named/session.key";
+
+	managed-keys-directory "/var/named/dynamic";
+
+    include "/etc/crypto-policies/back-ends/bind.config";
+};
+
+logging 
+{
+	channel default_debug {
+		file "data/named.run";
+		severity dynamic;
+	};
+};
+
+
+view "internal"
+{
+
+	match-clients	{ localnets; localhost; };
+	recursion yes;
+
+	zone "." IN {
+		type hint;
+		file "/var/named/named.ca";
+	};
+
+	include "/etc/named.rfc1912.zones";
+
+	zone "dutrieux.swilabus.com" {
+		type master;
+		file "db.dutrieux.swilabus.com.internal";
+		allow-update { none; };
+		allow-transfer { none; };
+	};
+};
+
+view "external"
+{
+
+	match-clients		{ any; };
+
+	zone "." IN {
+	        type hint;
+	        file "/var/named/named.ca";
+	};
+
+	recursion no;
+
+	zone "dutrieux.swilabus.com" { 
+		type master;
+		file "db.dutrieux.swilabus.com.external";
+	};
+};
+```
+
+db.dutrieux.swilabus.com.internal
+
+```
+$TTL 86400
+@   IN  SOA dns.dutrieux.swilabus.com.  root.dns.dutrieux.swilabus.com. (2023012101 28800   14400   3600000 3600)
+
+; *** NAME SERVER
+    IN  NS  ns.dutrieux.swilabus.com.
+
+; *** MAIL
+    IN  MX  10  smtp.dutrieux.swilabus.com.
+
+; *** RECORD
+ns IN  A   192.168.190.115 ; IP de votre serveur
+gate    IN  A   192.168.190.2
+pfsense IN  CNAME   gate.dutrieux.swilabus.com.
+```
+
+db.dutrieux.swilabus.com.external
+
+```
+$TTL 86400
+@   IN  SOA dns.dutrieux.swilabus.com.  root.dns.dutrieux.swilabus.com. (2023012101 28800   14400   3600000 3600)
+
+; *** NAME SERVER
+    IN  NS  gate.dutrieux.swilabus.com.
+
+; *** MAIL
+    IN  MX  10  smtp.dutrieux.swilabus.com.
+
+; *** RECORD
+gate IN  A   192.168.254.132 ; IP de votre serveur public
+ns  IN  CNAME   gate.dutrieux.swilabus.com.
+pfsense IN  CNAME   gate.dutrieux.swilabus.com.
+```
