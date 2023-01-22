@@ -5,11 +5,11 @@ import csv
 
 
 def add_samba_user(username, password):
-    subprocess.run(["smbpasswd", "-a", username],
-                   input=password, encoding='ascii')
+    subprocess.run(
+        f"echo -e \"{password}\n{password}\" | smbpasswd -a {username}")
 
 
-with open("./liste-utilisateurs.csv", "r", encoding='utf-8') as input:
+with open("./liste-utilisateurs-password.csv", "r", encoding='utf-8') as input:
     csvreader = csv.reader(input, delimiter=";")
     for row in csvreader:
         add_samba_user(row[3], row[4])
