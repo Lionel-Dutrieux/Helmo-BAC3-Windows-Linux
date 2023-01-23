@@ -139,6 +139,15 @@ Il faut enlever le commentaire #UserDir public_html
 
 > Vérifier les ACL pour que le groupe Apache puisse acceder /home/login/public_html
 
+Il ne faut pas oublier de changer les ACL du dossier de l'utilisateur
+
+```
+setfacl -m g:apache:rx /home/e190061/
+mkdir /home/e190061/public_html
+chown e190061:users /home/e190061/public_html
+setfacl -R -m g:apache:rx /home/e190061/public_html
+```
+
 ## Service
 
 ```
