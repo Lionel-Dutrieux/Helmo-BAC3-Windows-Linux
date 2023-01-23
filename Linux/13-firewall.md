@@ -254,4 +254,6 @@ Autoriser le protocol ICMP
 
 ```
 ip protocol icmp accept
+
+icmp type echo-request ip saddr 192.190.190.0/24 accept
 ```
