@@ -74,7 +74,7 @@ mynetworks = 172.18.1.0/24, 127.0.0.0/8
 
 mail_spool_directory = /var/spool/mail
 
-virtual_aliasçdomain = swi.la, swinnen.eu
+virtual_alias_domain = swi.la, swinnen.eu
 virtual_alias_maps = hash:/etc/postfix/virtual
 ```
 
@@ -125,6 +125,7 @@ vim 10-mail.conf
 
 ```
 mail_location = mbox:~/mail:INBOX=/var/spool/mail/%u
+mail_access_groups = mail
 ```
 
 vim 10-ssl.conf

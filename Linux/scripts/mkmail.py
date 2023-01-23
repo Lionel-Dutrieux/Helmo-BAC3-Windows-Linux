@@ -43,7 +43,7 @@ def createMail(login):
                        stdout=subprocess.PIPE, shell=True)
         subprocess.run(f"chown {login}:mail {mail_file}",
                        stdout=subprocess.PIPE, shell=True)
-        subprocess.run(f"chmod 660 {mail_file}",
+        subprocess.run(f"chmod 0660 {mail_file}",
                        stdout=subprocess.PIPE, shell=True)
 
 
