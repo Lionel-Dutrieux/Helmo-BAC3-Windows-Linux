@@ -12,7 +12,7 @@ Il y a 2 modes de fonctionnement
 ## Configuration
 
 ```
-vim /etc/vsftpd
+nano /etc/vsftpd/vsftpd.conf
 ```
 
 | Option | Excplication |
@@ -28,7 +28,7 @@ vim /etc/vsftpd
 | listen_ipv6=NO | Ecoute en IPV6 |
 | userlist_enable=YES | |
 | userlist_deny=YES |  |
-| userlist_file |  |
+| userlist_file | chemin |
 | pasv_min_port=10000 | Port minimal pour le NAT |
 | pasv_max_port=15000 | Port maximal pour le NAT |
 | pasv_address=1.2.3.4 | Adresse IP WAN |
@@ -50,6 +50,13 @@ Si userlist_enable=YES et userlist_deny=NO == Seul les utilisateurs connu et lis
 
 Si userlist_enable=NO == Tous les utilisateurs connu du système peuvent se connecter au serveur.
 
+Les fichiers userlist et chroot user doivent avoir un utilisateur par ligne
+
+```
+e190061
+swila
+```
+
 ### Appliquer la configuration
 
 ```
@@ -60,6 +67,27 @@ systemctl restart vsftpd
 
 ```
 vsftpd /etc/vsftpd/vsftpd.conf
+```
+
+Exemple
+
+```
+listen=YES
+listen_ipv6=NO
+
+allow_writeable_chroot=YES
+
+userlist_enable=YES
+userlist_deny=NO
+userlist_file=/etc/vsftpd/user_list
+chroot_local_user=YES
+chroot_list_enable=YES
+chroot_list_file=/etc/vsftpd/chroot_list
+pasv_enable=YES
+pasv_min_port=45000
+pasv_max_port=48000
+pasv_address=192.168.254.132
+
 ```
 
 ## Client FTP
