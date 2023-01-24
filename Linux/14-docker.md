@@ -52,3 +52,34 @@ EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```
 
+## Docker Compose
+
+### Installation
+
+```
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+```
+
+```
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
+### Cheat Sheet
+
+https://devhints.io/docker-compose
+
+### Exemple
+
+```yaml
+---
+version: "2.1"
+services:
+  homer:
+    image: php:8.0-apache-buster
+    container_name: php8
+    volumes:
+      - /opt/php-8.0:/var/www/html
+    ports:
+      - 8880:80
+    restart: unless-stopped
+```
