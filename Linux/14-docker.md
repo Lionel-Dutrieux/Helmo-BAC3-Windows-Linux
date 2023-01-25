@@ -52,6 +52,27 @@ EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```
 
+```
+FROM tomcat:latest
+
+EXPOSE 8000
+
+ENV CATALINA_HOME /usr/local/tomcat
+ENV PATH $CATALINA_HOME/bin:$PATH
+
+RUN mkdir -p /opt/tomcat9-conf
+
+COPY conf/ /opt/tomcat9-conf/
+
+RUN mv $CATALINA_HOME/webapps.dist $CATALINA_HOME/webapps
+
+COPY context.xml $CATALINA_HOME/webapps/manager/META-INF/
+
+VOLUME /opt/tomcat9-conf
+
+COPY struts2-showcase-2.5.10.war /opt/tomcat9-conf/webapps/struts.war
+```
+
 ## Docker Compose
 
 ### Installation
