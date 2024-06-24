@@ -1,9 +1,6 @@
 # Helmo-BAC3-Windows-Linux
 Synthèse pour les cours de Windows et de Linux
 
-> Cette synthèse a été écrite par Lionel Dutrieux et n'est rendue publique sur github uniquement pendant l'examen pour éviter les connexions avec un gestionnaire de mots de passe et l'utilisation de la double authentification (utilisation du téléphone pendant l'examen).
-> Je n'autorise personne d'autre que moi-même à pouvoir l'utiliser.
-
 ## Windows
 
 - [Démarrage de l'hyperviseur](Windows/1-hyperviseur.md)
